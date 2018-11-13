@@ -2,5 +2,5 @@
 
 for i in `seq -w 1 10`
 do
-  touch logs/abc.$i.txt
+  touch logs/abc.$i.log
 done
