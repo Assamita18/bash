@@ -1,7 +1,7 @@
 # bash
 bash exercises.
 
-Backup files, change extension.
+Backup files, change extension -> Execute backup.sh in /logs after .createfiles.
 
 Changing filenames.
 
