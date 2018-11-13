@@ -2,4 +2,4 @@
 
 mkdir logs
 mv *.log /logs
-rename *.log *.log.bck
+for f in *.log; do mv "$f" "${f/.log/bck}";done
