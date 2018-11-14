@@ -9,7 +9,7 @@ Compare keyword to match criteria. -->  [[ ${#s} -ge 8 && "$s" == *[A-Z]* && "$s
 
 Move files to a folder. Handle exception.
 
-Calculator.
+Calculator. -> Done
 
 log access to a file.  ->   stat -x | grep Modify (OSX)
 
