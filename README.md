@@ -5,13 +5,13 @@ Backup files, change extension -> Execute backup.sh in /logs after .createfiles.
 
 Changing filenames.
 
-Compare keyword to match criteria.
+Compare keyword to match criteria. -->  [[ ${#s} -ge 8 && "$s" == *[A-Z]* && "$s" == *[a-z]* && "$s" == *[0-9]* ]]
 
 Move files to a folder. Handle exception.
 
 Calculator.
 
-log access to a file.
+log access to a file.  ->   stat -x | grep Modify (OSX)
 
 Log4j to slf4j
 
