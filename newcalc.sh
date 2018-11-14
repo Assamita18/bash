@@ -1,12 +1,23 @@
 #!/usr/bin/env bash
 
-echo "Tell me a number"
-read number1
-echo "What are we doing?"
-read operator
-echo "Tell me another number"
-read number2
+regex1='[^0-9]+$'
+regex2='[^-+\*/]+$'
+
+if [[ $1 =~ $regex1 ]]; then
+  echo "The first one is not a number, bruh. Try again with a number, bruh."
+  exit 0
+fi
+
+if [[ $2 =~ $regex2 ]]; then
+  echo "not a valid operator, bruh. Try again with a valid operator, bruh."
+  exit 0
+fi
+
+if [[ $3 =~ $regex1 ]]; then
+  echo "the second one is not a number, bruh. Try again with a number, bruh."
+  exit 0
+fi
 
 
 echo "That is:"
-echo $(($number1 $operator $number2))
+echo $(($1 $2 $3))
