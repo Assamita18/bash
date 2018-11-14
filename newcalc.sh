@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-regex1='[^0-9]+$'
-regex2='[^-+*\/]+$'
+regex1='^\\d+$'
+regex2='[^-+*\/]'
 
 if [[ $1 =~ $regex1 ]]; then
   echo "The first one is not a number, bruh. Try again with a number, bruh."
@@ -20,4 +20,4 @@ fi
 
 
 echo "That is:"
-echo $(($1 $2 $3))
+echo $(($1 ${2//\\}  $3))
