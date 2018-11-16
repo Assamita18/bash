@@ -3,7 +3,7 @@ bash exercises.
 
 Backup files, change extension -> Execute backup.sh in /logs after .createfiles.
 
-Changing filenames.
+Changing filenames.  ---> missing human readable date.
 
 Compare keyword to match criteria. -->  [[ ${#s} -ge 8 && "$s" == *[A-Z]* && "$s" == *[a-z]* && "$s" == *[0-9]* ]]
 
