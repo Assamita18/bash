@@ -6,13 +6,18 @@
 #The script can take one or more files as argument.
 #Every file in the argument list will be moved from its current location to the trash can.
 #If a file does not exist, it will be logged in the console and move to the next one on the list.
-if [[ -z $1 ]]; then
-  trash=$1
+
+echo "using default trash folder (trash)"
+trashdir=trash
+mkdir $trashdir
+
+for argument in "$@"
+do
+finding=$(find $argument)
+if [[ "$finding" = "find: $argument: No such file or directory" ]]; then
+echo "could not find $argument"
 else
-  trash=trash
+mv $argument $trashdir/$argument.trash
+echo "$argument moved to $trashdir"
 fi
-mkdir $trash
-
-mv "$2" "$trash/$2.trash"
-
-#for i in *.log;do cp "$i" "renamedLogs/$i.bck";done
+done
