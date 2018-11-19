@@ -7,7 +7,7 @@ Changing filenames.  --> Done.
 
 Compare keyword to match criteria. --> Done
 
-Move files to a folder. Handle exception.
+Move files to a folder. -- Done
 
 Calculator. -> Done.
 
