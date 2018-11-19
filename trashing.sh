@@ -13,11 +13,5 @@ mkdir $trashdir
 
 for argument in "$@"
 do
-finding=$(find $argument)
-if [[ "$finding" = "find: $argument: No such file or directory" ]]; then
-echo "could not find $argument"
-else
-mv $argument $trashdir/$argument.trash
-echo "$argument moved to $trashdir"
-fi
+  mv $argument $trashdir/$argument.trash
 done
