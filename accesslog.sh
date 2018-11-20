@@ -7,8 +7,6 @@ oldatime=$startdate
 oldmtime=$startdate
 oldctime=$startdate
 
-echo "$oldatime $oldmtime $oldctime $interval $startdate $endate"
-
 if [[ $interval -le 0 ]]; then
   echo "we need an observation interval greater than 0 seconds, try again."
   exit 0
@@ -25,28 +23,28 @@ while [[ "$endate" > "$(date +%s)" ]]; do
   newctime=$(stat -f %c $i)
 
 
-  if [[ $newatime > $oldatime ]]; then
-    echo "File $i belongs to $owner, was accessed on $(date -r $newatime)" >> report.txt
+  if [[ "$newatime" > "$oldatime" ]]; then
+    echo "$i belongs to $owner, was accessed on $(date -r $newatime)" >> report.txt
     oldatime=$newatime
 
     echo "somebody accessed"
   fi
 
-  if [[ $newmtime > $oldmtime ]]; then
-    echo "File $i belongs to $owner, was modified on $(date -r $newmtime)" >> report.txt
+  if [[ "$newmtime" > "$oldmtime" ]]; then
+    echo "$i belongs to $owner, was modified on $(date -r $newmtime)" >> report.txt
     oldmtime=$newmtime
 
     echo "somebody modified"
   fi
 
-  if [[ $newctime > $oldctime ]]; then
-    echo "File $i belongs to $owner, was created on $(date -r $newctime)" >> report.txt
+  if [[ "$newctime" > "$oldctime" ]]; then
+    echo "$i belongs to $owner, was created on $(date -r $newctime)" >> report.txt
     oldctime=$newctime
 
     echo "somebody created"
   fi
 done;
-  echo "elapsed one cycle $(date +%s)"
+  echo "elapsed one cycle on $(date +%s)"
   sleep 6
 done;
 
