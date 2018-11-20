@@ -3,10 +3,10 @@
 for i in logs/*
 do
 owner=$(stat $i | cut -f 5 -d " ")
-atime=$(stat $i | cut -c 54-75)
-mtime=$(stat $i | cut -c 77-98)
-ctime=$(stat $i | cut -c 99-121)
-
+atime=$(date -r $(stat -f %a $i))
+mtime=$(date -r $(stat -f %m $i))
+ctime=$(date -r $(stat -f %c $i))
+#atimea=$(date -r $atime '+%Y%m%d')
 echo "File $i belongs to $owner, was accesed on $atime." >> report.txt
 
 # if [[ "$mtime" == "$ctime" ]]; then
