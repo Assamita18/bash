@@ -1,18 +1,18 @@
 # bash
 bash exercises.
 
-Backup files, change extension -> Execute backup.sh in /logs after .createfiles.
+1) Backup files, change extension -> Execute backup.sh in /logs after .createfiles.
 
-Changing filenames.  --> Done.
+2) Changing filenames.  --> Done. (modifyLogName.sh)
 
-Compare keyword to match criteria. --> Done
+3) Compare keyword to match criteria. --> Done (passwordcheck.sh)
 
-Move files to a folder. -- Done
+4) Move files to a folder. -- Done (trashing.sh)
 
-Calculator. -> Done.
+5) Calculator. -> Done. (newcalc.sh)
 
-log access to a file.  ->  Who did it?
+6) log access to a file.  ->  Who did it? (accesslog.sh)
 
-Log4j to slf4j -> Done.
+7) Log4j to slf4j -> Done. (migrateJava.sh)
 
-look for a class in .jar -> Done.
+8) look for a class in .jar -> Done. (classSearch.sh)
