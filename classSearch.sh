@@ -3,7 +3,7 @@
 classname=$1
 directory=$2
 
-echo $directory
+
 for i in $2*.jar
 do
   result=$(zipinfo -1 $i | grep -w $1.class)
