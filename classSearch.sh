@@ -9,7 +9,8 @@ do
   if [[ -z $result ]]; then
     echo "not found in $i"
   else
-    echo "found $1 in $i -> $result"
+    echo "$(tput setaf 1)Found $1 in $i -> $result"
+    tput setaf 0
   fi
 
 done;
