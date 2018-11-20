@@ -11,8 +11,8 @@ Move files to a folder. -- Done
 
 Calculator. -> Done.
 
-log access to a file.  ->   stat -x | grep Modify (OSX)
+log access to a file.  ->  Who did it?
 
-Log4j to slf4j
+Log4j to slf4j -> Done.
 
-look for a class in .jar
+look for a class in .jar -> Done.
