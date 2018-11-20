@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
-find . -name "*.jar" | xargs -n1 otherscript.sh $className
+classname=$1
+directory=$($2 + "/")
 
+for i in $2*.jar
+do
+  result=$(zipinfo -1 $i | grep $1.class)
+  if [[ -z $result ]]; then
+    echo "not found in $i"
+  else
+    echo "found $1 in $i -> $result"
+  fi
 
-zipinfo -1 $2 | grep $1 | sed 's/.*/$2/g' | uniq
+done;
